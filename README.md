@@ -173,7 +173,3 @@ In this example:
 ## License
 
 This package is licensed under the MIT License. See the [LICENSE](./LICENSE) file for more information.
-
----
-
-You can customize the GitHub URL and other details as needed. Let me know if you need further adjustments!
