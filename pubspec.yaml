@@ -1,7 +1,7 @@
 name: multi_value_listenable
-description: "A new Flutter project."
-version: 0.0.1
-homepage:
+description: "A package that provides a MultiValueListenable class that allows you to listen to multiple ValueListenable, ValueNotifier objects at once."
+version: 1.0.0
+homepage: https://github.com/AlexHCJP/multi_value_listenable
 
 environment:
   sdk: '>=3.4.4 <4.0.0'

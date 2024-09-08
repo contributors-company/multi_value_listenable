@@ -52,7 +52,7 @@ class MultiValueListenableBuilder extends StatefulWidget {
   /// The listenable function that is called whenever any of the [ValueNotifier]s change.
   /// The function is passed the current [ListValueNotifier].
   /// The function must return a widget.
-  final Function(ListValueNotifier)? listenable;
+  final void Function(ListValueNotifier)? listenable;
 
   /// The child widget that is passed to the [builder] function.
   /// This can be used to pass a child widget to the [builder] function.
@@ -70,13 +70,6 @@ class _MultiValueListenableBuilderState
   @override
   void initState() {
     super.initState();
-    _addListener();
-  }
-
-  @override
-  void didUpdateWidget(MultiValueListenableBuilder oldWidget) {
-    super.didUpdateWidget(oldWidget);
-    _removeListener();
     _addListener();
   }
 

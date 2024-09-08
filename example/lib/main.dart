@@ -53,6 +53,22 @@ class _MyHomePageState extends State<MyHomePage> {
 
   void _callback() {}
 
+  void _listen(ListValueNotifier values) {
+    final name = values.get<NameController>();
+    final surname = values.get<SurnameController>();
+    final middleName = values.get<MiddleNameController>();
+
+    final bool isAccess = name.text.isNotEmpty &&
+        surname.text.isNotEmpty &&
+        middleName.text.isNotEmpty;
+
+    if (isAccess) {
+      ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+        content: Text('Success'),
+      ));
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -81,6 +97,7 @@ class _MyHomePageState extends State<MyHomePage> {
               height: 12,
             ),
             MultiValueListenableBuilder(
+              listenable: _listen,
               valuesListenable: [
                 _nameController,
                 _surnameController,
